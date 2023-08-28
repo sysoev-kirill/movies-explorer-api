@@ -7,6 +7,6 @@
 
 ## Ссылки на проект
 
-IP 
+IP 51.250.66.87
 
-Backend 
+Backend https://api.sysoev.nomoreparties.co
