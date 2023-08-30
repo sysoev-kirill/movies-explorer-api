@@ -23,7 +23,7 @@ const movieSchema = new mongoose.Schema({
   },
 
   description: {
-    type: Number,
+    type: String,
     required: true,
   },
 
@@ -36,7 +36,7 @@ const movieSchema = new mongoose.Schema({
     required: true,
   },
 
-  trailer: {
+  trailerLink: {
     type: String,
     validate: {
       validator: (v) => validator.isURL(v),

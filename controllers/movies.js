@@ -19,7 +19,7 @@ const createMovie = (req, res, next) => {
     year,
     description,
     image,
-    trailer,
+    trailerLink,
     nameRU,
     nameEN,
     thumbnail,
@@ -32,12 +32,12 @@ const createMovie = (req, res, next) => {
     year,
     description,
     image,
-    trailer,
+    trailerLink,
     nameRU,
     nameEN,
     thumbnail,
     movieId,
-    owner
+    owner,
   })
     .then((movie) => res.send(movie))
     .catch((err) => {
@@ -75,5 +75,4 @@ module.exports = {
   getMovies,
   createMovie,
   deleteMovieById,
-
 };
