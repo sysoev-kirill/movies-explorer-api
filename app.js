@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const app = express();
+const cors = require ('cors');
 
 const { celebrate, Joi, errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -14,6 +15,7 @@ mongoose.connect(MONGO_DB, {
   family: 4,
 });
 
+app.use(cors({origin: ['http://localhost:3001', 'http://localhost:3000','http://sysoev.nomoreparties.co','https://sysoev.nomoreparties.co','https://api.sysoev.nomoreparties.co'], credentials: true, maxAge: 30}))
 const NotFoundError = require('./error/notFoundError');
 
 const usersRoutes = require('./routes/users');
